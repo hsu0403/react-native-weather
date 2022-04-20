@@ -36,6 +36,9 @@ export default function App() {
     if (!granted) {
       setOk(false);
     }
+    if (!ok) {
+      return;
+    }
     const {
       coords: { latitude, longitude },
     } = await Location.getCurrentPositionAsync({ accuracy: 5 });
